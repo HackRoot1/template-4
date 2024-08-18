@@ -1,0 +1,794 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./src/style.css" />
+
+        <!-- Aos animation link -->
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <!-- font awesome icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body>
+        <div class="overflow-x-hidden">
+            <!-- Navbar -->
+
+            <section data-aos="fade" class="bg-white shadow-md">
+                <div class="container flex justify-between py-4 sm:py-3">
+                    <!-- Logo Section -->
+                    <div class="font-bold text-3xl">Logo</div>
+                    <!-- Navlinks Section -->
+                    <div>
+                        <ul class="flex items-center gap-10">
+                            <li>
+                                <a
+                                    class="inline-block hover:text-primaryDark text-xl font-semibold"
+                                    href="#"
+                                    >Home</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="inline-block hover:text-primaryDark text-xl font-semibold"
+                                    href="#"
+                                    >About</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="inline-block hover:text-primaryDark text-xl font-semibold"
+                                    href="#"
+                                    >Contact</a
+                                >
+                            </li>
+                            <!-- Simple Dropdown -->
+                            <li class="cursor-pointer group">
+                                <a
+                                    class="inline-block hover:text-primaryDark text-xl font-semibold"
+                                    href="#"
+                                >
+                                    <div
+                                        class="flex items-center gap-[2px] py-2"
+                                    >
+                                        Categories
+                                        <span
+                                            class="rotate-180 group-hover:rotate-0 transition-all duration-300"
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                fill="currentColor"
+                                                class="size-6"
+                                            >
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    d="M11.47 7.72a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 1 1-1.06 1.06L12 9.31l-6.97 6.97a.75.75 0 0 1-1.06-1.06l7.5-7.5Z"
+                                                    clip-rule="evenodd"
+                                                />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </a>
+
+                                <!-- Dropdown list -->
+                                <div
+                                    class="absolute z-[9999] hidden group-hover:block w-[200px] bg-white text-black shadow-md p-2 rounded-md"
+                                >
+                                    <ul>
+                                        <li>
+                                            <a
+                                                class="inline-block text-xl w-full rounded-md p-2 font-semibold hover:bg-primaryDark/20"
+                                                href="#"
+                                                >Vegetables</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                class="inline-block text-xl w-full rounded-md p-2 font-semibold hover:bg-primaryDark/20"
+                                                href="#"
+                                                >Fruits</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                class="inline-block text-xl w-full rounded-md p-2 font-semibold hover:bg-primaryDark/20"
+                                                href="#"
+                                                >Grains</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <!-- login button section -->
+                            <li>
+                                <button
+                                    class="flex justify-center items-center gap-2 bg-secondary text-xl h-[40px] text-white px-5 py-2 hover:scale-105 duration-300"
+                                    id="popupBtn"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                        class="size-6"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z"
+                                            clip-rule="evenodd"
+                                        />
+                                    </svg>
+
+                                    My Account
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hero Section -->
+            <section class="bgStyle relative">
+                <div class="container py-16 sm:py-0">
+                    <div
+                        class="grid grid-cols-1 sm:grid-cols-2 gap-4 place-items-center min-h-[600px]"
+                    >
+                        <!-- Text content -->
+                        <div class="space-y-7 text-dark order-2 sm:order-1">
+                            <h1 class="text-5xl" data-aos="fade-up">
+                                Fresh & Healthy Meal Plan
+                                <span
+                                    class="text-secondary font-cursive text-7xl"
+                                    >Delivery</span
+                                >
+                                in Miami
+                            </h1>
+                            <p
+                                class="lg:pr-64"
+                                data-aos="fade-up"
+                                data-aos-delay="300"
+                            >
+                                Delicious Meals Delivered to Your Door From
+                                $132.95 per week.
+                            </p>
+
+                            <!-- Button section -->
+                            <div data-aos="fade-up" data-aos-delay="500">
+                                <div class="flex items-center group">
+                                    <button
+                                        class="bg-primary h-[40px] text-white px-3 py-2"
+                                    >
+                                        Choose Your Meal Plan
+                                    </button>
+
+                                    <div
+                                        class="inline-block group-hover:!translate-x-2 duration-200 p-2 text-base h-[40px] w-[40px] bg-primaryDark text-white"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                            class="size-6"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z"
+                                                clip-rule="evenodd"
+                                            />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Image section -->
+                        <div
+                            data-aos="zoom-in"
+                            data-aos-delay="500"
+                            class="relative z-30 order-1 sm:order-2"
+                        >
+                            <img
+                                src="./assets/hero.png"
+                                alt=""
+                                class="w-full sm:scale-125 sm:translate-y-16"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Banner Section -->
+            <section>
+                <div class="container py-14 relative">
+                    <div class="relative z-20">
+                        <h1
+                            data-aos="fade-up"
+                            data-aos-delay="300"
+                            class="py-8 tracking-wider text-2xl font-semibold text-dark text-center"
+                        >
+                            Taste the Healthy Difference
+                        </h1>
+
+                        <div
+                            class="space-y-10"
+                        >
+                            <div
+                                data-aos="fade-up"
+                                data-aos-delay="300"
+                                class="grid grid-cols-1 sm:grid-cols-2 gap-4 py-10"
+                            >
+                                <div>
+                                    <p>
+                                        We Know that
+                                        <span class="text-primary">time</span>
+                                        is the Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. Amet
+                                        excepturi, iste reprehenderit laboriosam
+                                        sapiente officia tempora quibusdam cum!
+                                        Corrupti, nihil!
+                                    </p>
+                                </div>
+                                <div></div>
+                            </div>
+                            <div
+                                data-aos="fade-up"
+                                data-aos-delay="300"
+                                class="grid grid-cols-1 sm:grid-cols-2 gap-4 py-10"
+                            >
+                                <div></div>
+                                <div>
+                                    <p>
+                                        We Know that
+                                        <span class="text-primary">time</span>
+                                        is the Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. Amet
+                                        excepturi, iste reprehenderit laboriosam
+                                        sapiente officia tempora quibusdam cum!
+                                        Corrupti, nihil!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Button section -->
+                        <div class="flex justify-center mt-10 sm:mt-14">
+                            <div class="flex items-center group">
+                                <button
+                                    class="bg-primary h-[40px] text-white px-3 py-2"
+                                >
+                                    Choose Your Meal Plan
+                                </button>
+
+                                <div
+                                    class="inline-block group-hover:!translate-x-2 duration-200 p-2 text-base h-[40px] w-[40px] bg-primaryDark text-white"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                        class="size-6"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z"
+                                            clip-rule="evenodd"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- bg fruits pngs -->
+                        <div
+                            data-aos="fade-right"
+                            class="absolute top-5 -left-16 sm:bottom-0 sm:left-0 opacity-50 sm:opacity-100"
+                        >
+                            <img
+                                src="./assets/png/leaf.png"
+                                class="max-w-[160px]"
+                                alt=""
+                            />
+                        </div>
+
+                        <div
+                            data-aos="fade-right"
+                            class="absolute -bottom-16 -left-16 sm:bottom-0 sm:left-0 opacity-50 sm:opacity-100"
+                        >
+                            <img
+                                src="./assets/png/tomato.png"
+                                class="max-w-[280px]"
+                                alt=""
+                            />
+                        </div>
+
+                        <div
+                            data-aos="fade-left"
+                            class="absolute top-10 -right-16 sm:right-20 opacity-50 sm:opacity-100"
+                        >
+                            <img
+                                src="./assets/png/lemon.png"
+                                class="max-w-[200px]"
+                                alt=""
+                            />
+                        </div>
+
+                        <div data-aos="fade-left" class="hidden sm:block absolute bottom-0 right-0">
+                            <img
+                                src="./assets/png/apple.png"
+                                class="max-w-[200px]"
+                                alt=""
+                            />
+                        </div>
+
+                        <div
+                            data-aos="fade"
+                            class="absolute top-1/2 -translate-y-1/2 left-1/3 -translate-x-1/2 opacity-50 sm:opacity-100"
+                        >
+                            <img
+                                src="./assets/png/kiwi.png"
+                                class="max-w-[180px]"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Choose Us -->
+            <section class="py-14 md:py-28 bg-gray-50">
+                <div class="container">
+                    <!-- Heading Section -->
+                    <h1
+                        data-aos="fade" 
+                        class="pb-16 tracking-wider text-2xl font-semibold text-dark text-center"
+                    >
+                        Why Choose Us
+                    </h1>
+
+                    <!-- Card Section -->
+                    <div data-aos="fade" data-aos-delay="300">
+                        <div
+                            class="grid grid-cols-2 md:grid-cols-4 gap-14 sm:gap-4"
+                        >
+                            <!-- 1st Card -->
+                            <div
+                                class="text-center flex justify-center items-center flex-col gap-1 px-2"
+                            >
+                                <p class="text-dark/70 font-semibold">
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Repudiandae, natus.
+                                </p>
+                                <p
+                                    class="text-5xl rotate-90 text-primary text-center translate-x-5"
+                                >
+                                    ....
+                                </p>
+                                <div
+                                    class="text-5xl text-primary text-center translate-x-5"
+                                >
+                                    <i class="fa-solid fa-bus"></i>
+                                </div>
+                            </div>
+
+                            <!-- 2nd Card -->
+                            <div
+                                class="text-center flex justify-center items-center flex-col gap-1 px-2"
+                            >
+                                <div
+                                    class="text-5xl text-primary text-center translate-x-5"
+                                >
+                                    <i class="fa-solid fa-bus"></i>
+                                </div>
+                                <p
+                                    class="text-5xl rotate-90 text-primary text-center translate-x-5"
+                                >
+                                    ....
+                                </p>
+                                <p class="text-dark/70 font-semibold">
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Repudiandae, natus.
+                                </p>
+                            </div>
+
+                            <!-- 3rd Card -->
+                            <div
+                                class="text-center flex justify-center items-center flex-col gap-1 px-2"
+                            >
+                                <p class="text-dark/70 font-semibold">
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Repudiandae, natus.
+                                </p>
+                                <p
+                                    class="text-5xl rotate-90 text-primary text-center translate-x-5"
+                                >
+                                    ....
+                                </p>
+                                <div
+                                    class="text-5xl text-primary text-center translate-x-5"
+                                >
+                                    <i class="fa-solid fa-bus"></i>
+                                </div>
+                            </div>
+
+                            <!-- 4th Card -->
+                            <div
+                                class="text-center flex justify-center items-center flex-col gap-1 px-2"
+                            >
+                                <div
+                                    class="text-5xl text-primary text-center translate-x-5"
+                                >
+                                    <i class="fa-solid fa-bus"></i>
+                                </div>
+                                <p
+                                    class="text-5xl rotate-90 text-primary text-center translate-x-5"
+                                >
+                                    ....
+                                </p>
+                                <p class="text-dark/70 font-semibold">
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Repudiandae, natus.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About section -->
+            <section class="bgStyle2 py-14">
+                <div class="container min-h-[500px] relative z-10">
+                    <h1
+                        data-aos="fade" 
+                        class="pt-20 tracking-wider text-4xl font-semibold text-white text-center"
+                    >
+                        About Us
+                    </h1>
+
+                    <!-- Card Section -->
+                    <div data-aos="fade" data-aos-delay="300" class="bg-white/80 p-10 my-10">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quisquam, perspiciatis. Dicta architecto nemo ullam
+                        aperiam consequatur amet officiis esse, recusandae
+                        excepturi inventore quasi optio explicabo maiores
+                        eligendi itaque nostrum temporibus officia unde maxime.
+                        Debitis, molestias aperiam dicta laboriosam, sunt
+                        voluptatem adipisci animi veniam, commodi nam obcaecati
+                        nihil quaerat itaque eum?
+                        <div class="pt-10 flex justify-center">
+                            <button
+                                class="flex justify-center items-center gap-2 bg-primary text-xl h-[40px] text-white px-5 py-2 hover:scale-105 duration-300"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    class="size-6"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                                My Account
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- wave vector -->
+                <div class="absolute top-0 right-0 w-full">
+                    <img
+                        src="./assets/vector-wave.png"
+                        class="mx-auto"
+                        alt=""
+                    />
+                </div>
+            </section>
+
+            <!-- Banner Section -->
+            <section>
+                <div class="container py-14 relative">
+                    <div class="relative z-20">
+                        <h1
+                            data-aos="fade-up"
+                            data-aos-delay="300"
+                            class="py-8 tracking-wider text-2xl font-semibold text-dark text-center"
+                        >
+                            Taste the Healthy Difference
+                        </h1>
+
+                        <div
+                            class="space-y-10"
+                        >
+                            <div
+                                data-aos="fade-up"
+                                data-aos-delay="300"
+                                class="grid grid-cols-1 sm:grid-cols-2 gap-4 py-10"
+                            >
+                                <div>
+                                    <p>
+                                        We Know that
+                                        <span class="text-primary">time</span>
+                                        is the Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. Amet
+                                        excepturi, iste reprehenderit laboriosam
+                                        sapiente officia tempora quibusdam cum!
+                                        Corrupti, nihil!
+                                    </p>
+                                </div>
+                                <div></div>
+                            </div>
+                            <div
+                                data-aos="fade-up"
+                                data-aos-delay="300"
+                                class="grid grid-cols-1 sm:grid-cols-2 gap-4 py-10"
+                            >
+                                <div></div>
+                                <div>
+                                    <p>
+                                        We Know that
+                                        <span class="text-primary">time</span>
+                                        is the Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. Amet
+                                        excepturi, iste reprehenderit laboriosam
+                                        sapiente officia tempora quibusdam cum!
+                                        Corrupti, nihil!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Button section -->
+                        <div class="flex justify-center mt-10 sm:mt-14">
+                            <div class="flex items-center group">
+                                <button
+                                    class="bg-primary h-[40px] text-white px-3 py-2"
+                                >
+                                    Choose Your Meal Plan
+                                </button>
+
+                                <div
+                                    class="inline-block group-hover:!translate-x-2 duration-200 p-2 text-base h-[40px] w-[40px] bg-primaryDark text-white"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                        class="size-6"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z"
+                                            clip-rule="evenodd"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- bg fruits pngs -->
+                        <div
+                            data-aos="fade-right"
+                            class="absolute top-5 -left-16 sm:bottom-0 sm:left-0 opacity-50 sm:opacity-100"
+                        >
+                            <img
+                                src="./assets/png/leaf.png"
+                                class="max-w-[160px]"
+                                alt=""
+                            />
+                        </div>
+
+                        <div
+                            data-aos="fade-right"
+                            class="absolute -bottom-16 -left-16 sm:bottom-0 sm:left-0 opacity-50 sm:opacity-100"
+                        >
+                            <img
+                                src="./assets/png/tomato.png"
+                                class="max-w-[280px]"
+                                alt=""
+                            />
+                        </div>
+
+                        <div
+                            data-aos="fade-left"
+                            class="absolute top-10 -right-16 sm:right-20 opacity-50 sm:opacity-100"
+                        >
+                            <img
+                                src="./assets/png/lemon.png"
+                                class="max-w-[200px]"
+                                alt=""
+                            />
+                        </div>
+
+                        <div data-aos="fade-left" class="hidden sm:block absolute bottom-0 right-0">
+                            <img
+                                src="./assets/png/apple.png"
+                                class="max-w-[200px]"
+                                alt=""
+                            />
+                        </div>
+
+                        <div
+                            data-aos="fade"
+                            class="absolute top-1/2 -translate-y-1/2 left-1/3 -translate-x-1/2 opacity-50 sm:opacity-100"
+                        >
+                            <img
+                                src="./assets/png/kiwi.png"
+                                class="max-w-[180px]"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer Section -->
+            <section class="text-white mt-20">
+                <div
+                    class="container bg-gradient-to-b from-primary to-primaryDark rounded-t-3xl"
+                >
+                    <div>
+                        <!-- Heading Section -->
+                        <h1
+                            class="py-10 text-3xl font-bold text-yellow text-center"
+                        >
+                            Contact
+                        </h1>
+
+                        <!-- grid section -->
+                        <div
+                            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-14 border-b-2 border-white pb-6"
+                        >
+                            <!-- Address Section -->
+                            <div class="text-center space-y-4">
+                                <div class="flex justify-center">
+                                    <!-- location icon -->
+                                    <i
+                                        class="fa-solid fa-location-dot text-5xl"
+                                    ></i>
+                                </div>
+                                <p>
+                                    H.N.27, Rao Ali, Anant Niwas, Post-ABC,
+                                    Tal.-ABC, Dist.-Thane, Maharashtra 400 000
+                                </p>
+                            </div>
+
+                            <!-- Email Section -->
+                            <div class="text-center space-y-4">
+                                <div class="flex justify-center">
+                                    <!-- location icon -->
+                                    <i
+                                        class="fa-solid fa-envelope text-5xl"
+                                    ></i>
+                                </div>
+                                <div>
+                                    <p>example@gmail.com</p>
+                                    <p>example@gmail.com</p>
+                                </div>
+                            </div>
+
+                            <!-- Number Section -->
+
+                            <div class="text-center space-y-4">
+                                <div class="flex justify-center">
+                                    <!-- location icon -->
+                                    <i class="fa-solid fa-phone text-5xl"></i>
+                                </div>
+                                <div>
+                                    <p>9879879877 - Sales and Services</p>
+                                    <p>9879879877 - Hiring Queries</p>
+                                    <p>9879879877 - Whatsapp</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Copyright section -->
+                        <div class="flex justify-between p-4 items-center">
+                            <p>2024 TCJ. All rights reserved.</p>
+                            <div class="flex items-center gap-6">
+                                <a href="#">Privacy Policy</a>
+                                <a href="#">Terms & C onditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Popup -->
+            <div id="popup" class="hidden">
+                <div
+                    class="h-screen w-screen fixed top-0 left-0 bg-black/50 z-50 backdrop-blur-sm"
+                >
+                    <div
+                        class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 shadow-md bg-white rounded-md duration-200 w-[300px]"
+                    >
+                        <!-- header section -->
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h1 class="text-2xl font-bold text-dark">
+                                    Login
+                                </h1>
+                            </div>
+                            <div>
+                                <i
+                                    id="closePopup"
+                                    class="fa-solid fa-xmark text-2xl cursor-pointer"
+                                ></i>
+                            </div>
+                        </div>
+
+                        <!-- Login form section -->
+                        <div class="mt-4">
+                            <input
+                                type="email"
+                                placeholder="Enter Email"
+                                class="w-full rounded-md border border-gray-300 dark:border-gray-500 px-2 py-1 mb-4"
+                            />
+                            <input
+                                type="password"
+                                placeholder="Enter Password"
+                                class="w-full rounded-md border border-gray-300 dark:border-gray-500 px-2 py-1 mb-4"
+                            />
+                            <!-- login button -->
+                            <div>
+                                <button
+                                    class="w-full bg-primary text-white p-2 rounded-md"
+                                >
+                                    Login
+                                </button>
+                            </div>
+
+                            <!-- social login -->
+                            <div class="mt-4">
+                                <p class="text-center">Or Login With</p>
+                                <div class="flex justify-center gap-2 mt-2">
+                                    <i
+                                        class="fa-brands fa-facebook text-3xl hover:text-blue-500 duration-200"
+                                    ></i>
+                                    <i
+                                        class="fa-brands fa-google text-3xl hover:text-primary duration-200"
+                                    ></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document
+                .getElementById("closePopup")
+                .addEventListener("click", function () {
+                    document.getElementById("popup").style.display = "none";
+                    localStorage.setItem("popup", "false");
+                });
+
+            document
+                .getElementById("popupBtn")
+                .addEventListener("click", function () {
+                    document.getElementById("popup").style.display = "block";
+                    localStorage.setItem("popup", "true");
+                });
+
+            AOS.init({
+                offset: 100,
+                duration: 800,
+                easing: "ease-in-sine",
+                delay: 100,
+            });
+        </script>
+    </body>
+</html>
