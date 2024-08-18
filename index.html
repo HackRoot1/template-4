@@ -34,27 +34,27 @@
                         <ul class="flex items-center gap-10">
                             <li>
                                 <a
-                                    class="inline-block hover:text-primaryDark text-xl font-semibold"
+                                    class="hidden sm:inline-block hover:text-primaryDark text-xl font-semibold"
                                     href="#"
                                     >Home</a
                                 >
                             </li>
                             <li>
                                 <a
-                                    class="inline-block hover:text-primaryDark text-xl font-semibold"
+                                    class="hidden sm:inline-block hover:text-primaryDark text-xl font-semibold"
                                     href="#"
                                     >About</a
                                 >
                             </li>
                             <li>
                                 <a
-                                    class="inline-block hover:text-primaryDark text-xl font-semibold"
+                                    class="hidden sm:inline-block hover:text-primaryDark text-xl font-semibold"
                                     href="#"
                                     >Contact</a
                                 >
                             </li>
                             <!-- Simple Dropdown -->
-                            <li class="cursor-pointer group">
+                            <li class="hidden md:block cursor-pointer group">
                                 <a
                                     class="inline-block hover:text-primaryDark text-xl font-semibold"
                                     href="#"
@@ -115,7 +115,7 @@
                             <!-- login button section -->
                             <li>
                                 <button
-                                    class="flex justify-center items-center gap-2 bg-secondary text-xl h-[40px] text-white px-5 py-2 hover:scale-105 duration-300"
+                                    class="flex justify-center items-center gap-2 bg-secondary text-xl h-[40px] text-white px-2 md:px-5 py-2 hover:scale-105 duration-300"
                                     id="popupBtn"
                                 >
                                     <svg
@@ -637,6 +637,7 @@
             <!-- Footer Section -->
             <section class="text-white mt-20">
                 <div
+                    data-aos="fade-down"
                     class="container bg-gradient-to-b from-primary to-primaryDark rounded-t-3xl"
                 >
                     <div>
